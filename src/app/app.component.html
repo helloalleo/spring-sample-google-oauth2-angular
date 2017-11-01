@@ -1,3 +1,27 @@
 <h1>
   {{title}}
 </h1>
+<div class="col-md-12">
+  <a class="btn btn-default" href="http://localhost:8080/login/google">Google Login</a>
+</div>
+
+
+<!-- Home panel. It will visible after successfull login -->
+<div class="panel panel-default" *ngIf="user">
+  <div class="panel-heading">
+    <!--<img class="p-img" alt=""-->
+         <!--ng-src="{{user.userAuthentication.details.picture}}">-->
+  </div>
+  <div class="panel-body">
+
+
+    <div class="col-md-12">Email :
+      {{user.userAuthentication?.details.email}}
+    </div>
+    <div class="col-md-12">
+      <a href="#" class="btn btn-default margin-top-5"
+         (click)="logout()"> Logout </a>
+    </div>
+  </div>
+</div>
+<!-- End Home Panel -->
