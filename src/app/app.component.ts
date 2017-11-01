@@ -35,6 +35,9 @@ export class AppComponent implements OnInit {
       .logout()
       .subscribe(() => {
         this.user = null;
+      }, (error) => {
+        this.user = null;
+        console.log(error);
       });
   }
 

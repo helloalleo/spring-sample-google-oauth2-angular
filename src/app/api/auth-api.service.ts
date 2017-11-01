@@ -12,6 +12,6 @@ export class AuthApiService {
   }
 
   logout() {
-    return this.apiService.get(ApiConstants.LOGOUT_URL);
+    return this.apiService.post(ApiConstants.LOGOUT_URL, {});
   }
 }
